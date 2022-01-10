@@ -1,0 +1,30 @@
+// WAP to Reverse Alternative Character of String array
+// Case2 : Input 3 IMPORTANT -> PMITROTNA
+
+#include <bits/stdc++.h>
+using namespace std;
+
+string revAlternateK(string f, int k, int len)
+{
+	for (int i = 0; i < f.size();) {
+		if (i + k > len)
+			break;
+		reverse(f.begin() + i, f.begin() + i + k);
+		i += 1 * k;
+	}
+	return f;
+}
+
+int main()
+{
+    string f;
+    cout << "Type your full name: ";
+    cin >> f;
+    cout << "\n Your name is: \n" << f;
+	int len = f.length();
+	int k = 3;
+	cout << "\n" << revAlternateK(f, k, len);
+
+	return 0;
+}
+

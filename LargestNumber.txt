@@ -1,0 +1,23 @@
+// Write a program that will take input from users and find the largest number from the user inputs and print it.
+#include <stdio.h>
+
+int main()
+{
+    int a[10],Size,i,Largest;
+    printf("\n Please Enter the size of an array : ");
+    scanf("%d",&Size);
+    printf("\n Please Enter %d element of an array: \n",Size);
+    
+    for(i=0;i<Size;i++){
+        scanf("%d",&a[i]);
+    }
+    Largest=a[0];
+    for(i=1;i<Size;i++){
+        if(Largest<a[i]){
+            Largest=a[i];
+        }
+    }
+    printf("\n Largest element of an array = %d",Largest);
+    return 0;
+}
+
